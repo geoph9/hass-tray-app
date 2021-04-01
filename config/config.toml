@@ -1,0 +1,14 @@
+[weather_settings]
+show_weather_stats = true
+refresh_stats = false
+refresh_rate = 10  # in seconds
+show_humidity = true
+temp_entity_id = ""
+humidity_entity_id = ""
+
+[toggleables]
+entity_ids = ['']
+
+[user_settings]
+hass_access_token = ""
+hass_url = ""
