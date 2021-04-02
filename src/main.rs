@@ -19,12 +19,14 @@ fn main() {
             expect("Something happened")
     );
 
-    println!("weather_settings->refresh_rate: {:?}", settings.weather_settings.refresh_rate);
+    println!("toggleables->entity_ids: {:?}", settings.toggleables.entity_ids);
 
     gtk::init().unwrap();
+    let mut tray = TrayItem::new("", "").unwrap();
 
     let mut tray = TrayItem::new("Tray Example", "").unwrap();
     tray.set_icon(icons_dir.join("hass-main.png").to_str().unwrap()).unwrap();
+    tray.add_label("Testttt").unwrap();
 
     tray.add_label("Tray Label").unwrap();
 
