@@ -1,13 +1,37 @@
 [package]
-name = "tiTest"
+name = "hass-tray-app"
 version = "0.1.0"
-authors = ["geoph9 <geoph9@protonmail.com>"]
+authors = ["George K. <geoph9@protonmail.com>"]
 edition = "2018"
+descriptions = "A Home Assistan systray application."
+homepage = "https://github.com/geoph9/hass-tray-app"
+repository = "https://github.com/geoph9/hass-tray-app"
+readme = "README.md"
+keywords = ["tray", "systray", "home-assistant", "hass tray"]
+license = "Apache 2.0"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 tray-item = "0.5.0-alpha"
-gtk = "0.9"
+#gtk = "0.9"
 toml = "0.5.8"
 serde = { version = "1.0.125", features = ["derive"]}
+
+# The following is taken from https://github.com/olback/tray-item-rs on which this project is based on
+[target.'cfg(target_os="linux")'.dependencies]
+gtk = "0.9"
+
+[target.'cfg(target_os="windows")'.dependencies]
+winapi = { version = "0.3", features = ["shellapi", "libloaderapi", "errhandlingapi", "impl-default"] }
+libc = "0.2"
+padlock = "0.2"
+# winrt = { git = "https://github.com/microsoft/winrt-rs" } # No crosss compilation available
+
+[target.'cfg(target_os="macos")'.dependencies]
+cocoa = "0.24"
+objc = "0.2"
+core-graphics = "0.22"
+objc-foundation = "0.1"
+objc_id = "0.1"
+libc = "0.2"

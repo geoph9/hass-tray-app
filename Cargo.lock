@@ -582,6 +582,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "hass-tray-app"
+version = "0.1.0"
+dependencies = [
+ "cocoa",
+ "core-graphics",
+ "gtk",
+ "libc",
+ "objc",
+ "objc-foundation",
+ "objc_id",
+ "padlock",
+ "serde",
+ "toml",
+ "tray-item",
+ "winapi",
+]
+
+[[package]]
 name = "heck"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1005,16 +1023,6 @@ dependencies = [
  "proc-macro2",
  "quote",
  "syn",
-]
-
-[[package]]
-name = "tiTest"
-version = "0.1.0"
-dependencies = [
- "gtk",
- "serde",
- "toml",
- "tray-item",
 ]
 
 [[package]]
