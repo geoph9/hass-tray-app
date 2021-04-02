@@ -1,4 +1,5 @@
 mod config;
+mod preferences;
 
 use tray_item::TrayItem;
 use gtk;

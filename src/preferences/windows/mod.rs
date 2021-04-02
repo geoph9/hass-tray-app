@@ -1,0 +1,5 @@
+
+
+pub struct PreferencesWindows {
+    // TODO
+}
